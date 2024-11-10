@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Importing the AOS library
+import "aos/dist/aos.css";
+import Image from "next/image"; 
 
 const Projects = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1200,  // Set duration of animation
+      duration: 1200,  
       easing: "ease-out-back",
       delay: 100,
     });
@@ -71,10 +72,12 @@ const Projects = () => {
             className="relative group"
           >
             {/* Project Image */}
-            <img
+            <Image
               src={project.image}
               alt={project.name}
               className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
+              width={500}
+              height={300}
             />
             {/* Project Overlay */}
             <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-60 rounded-lg transition-opacity duration-300"></div>

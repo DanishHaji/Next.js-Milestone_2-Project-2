@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import styles from './Hero.module.css'; // Importing CSS module
+import styles from './Hero.module.css';
+import Image from 'next/image';
 
 const Hero = () => {
   useEffect(() => {
@@ -31,10 +32,12 @@ const Hero = () => {
             data-aos-delay="200"
             data-aos-duration="1200"
           >
-            <img
+            <Image
               src="/profile.png"
               alt="Your Profile"
               className={`${styles['profile-img']} rounded-full border-4 border-white mx-auto lg:mx-0`}
+              width={500} 
+              height={500} 
             />
           </div>
           {/* Hero Content on Right */}
@@ -43,12 +46,12 @@ const Hero = () => {
             className="lg:w-2/3 text-center lg:text-left"
           >
             <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold leading-tight mb-4 sm:mb-6 text-[#00FFFF] drop-shadow-lg">
-              Hi, I'm Danish Haji
+              Hi, I&apos;m Danish Haji
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 max-w-3xl mx-auto lg:mx-0 text-[#E5E5E5] font-medium tracking-wide leading-relaxed">
-              "I am a passionate web developer dedicated to crafting visually engaging and highly functional websites.
+            &quot;I am a passionate web developer dedicated to crafting visually engaging and highly functional websites.
               With a strong foundation in modern web technologies, I strive to build seamless, user-centered digital experiences
-              that leave a lasting impression. My focus is on clean code, responsive design, and bringing creative visions to life."
+              that leave a lasting impression. My focus is on clean code, responsive design, and bringing creative visions to life.&quot;
             </p>
             <div className="flex justify-center lg:justify-start gap-4 mb-6">
               {/* Social Icons */}
@@ -73,7 +76,7 @@ const Hero = () => {
               {/* Hire Me Button with Envelope Icon */}
               <a
                 href="mailto:danish.haji111@gmail.com"
-                className="inline-block bg-[#6A5ACD] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#00FFFF] hover:text-black transition-all duration-300 flex items-center justify-center"
+                className=" bg-[#6A5ACD] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#00FFFF] hover:text-black transition-all duration-300 flex items-center justify-center"
                 data-aos="fade-up"
                 data-aos-delay="300"
                 title="Hire Me via Email"
