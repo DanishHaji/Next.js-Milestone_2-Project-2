@@ -1,0 +1,28 @@
+.hero-section {
+    height: 100vh;
+    background-image: url('/background.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .profile-img {
+    width: 12rem; /* Tailwind size w-48 */
+    height: 12rem; /* Tailwind size h-48 */
+  }
+  
+  @media (min-width: 640px) { /* sm breakpoint */
+    .profile-img {
+      width: 16rem; /* Tailwind size w-64 */
+      height: 16rem; /* Tailwind size h-64 */
+    }
+  }
+  
+  @media (min-width: 768px) { /* md breakpoint */
+    .profile-img {
+      width: 20rem; /* Tailwind size w-80 */
+      height: 20rem; /* Tailwind size h-80 */
+    }
+  }
